@@ -49,7 +49,7 @@ def scanText(text:list, startPos:int) -> int:
         scanText(text,startPos+1)
         
     elif text[startPos] in posiDict:
-        if lastSensePos < lastPuncPos and lastInversePos < lastPuncPos:
+        if lastSensePos[0] < lastPuncPos and lastInversePos < lastPuncPos:
             score += 1
             scanText(text,startPos+1)
             
