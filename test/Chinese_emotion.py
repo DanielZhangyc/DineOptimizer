@@ -102,8 +102,9 @@ lastPuncPos:int = 0 # 记录最后标点符号位置
 score:int = 0 # 记录情感得分
 
 text = input("sentence:").strip()
-textCut = list(jieba.cut(text,cut_all=False)) # 分词
+textCut = list(jieba.cut(text,cut_all=True)) # 分词
 
 scanText(textCut, 0)
+# print(textCut)
 print(score)
         
