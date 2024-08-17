@@ -60,7 +60,7 @@ def scanText(text:list, startPos:int) -> int:
             lastSensePos = (-1,0)
         
         if lastInversePos > lastPuncPos:
-            deltascore *= -1
+            deltaScore *= -1
             lastInversePos = -1
             
         score += deltaScore
@@ -79,7 +79,7 @@ def scanText(text:list, startPos:int) -> int:
             lastSensePos = (-1,0)
         
         if lastInversePos > lastPuncPos:
-            deltascore *= -1
+            deltaScore *= -1
             lastInversePos = -1
             
         score += deltaScore
