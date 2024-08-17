@@ -57,7 +57,7 @@ def scanText(text:list, startPos:int) -> int:
         
         if lastSensePos[0] > lastPuncPos:
             deltaScore += lastSensePos[1]
-            lastSensePos[0] = -1
+            lastSensePos = (-1,0)
         
         if lastInversePos > lastPuncPos:
             deltascore *= -1
@@ -68,7 +68,7 @@ def scanText(text:list, startPos:int) -> int:
         scanText(text,startPos+1)
         
     elif text[startPos] in negaDict:
-        if lastSensePos < lastPuncPos and lastInversePos < lastPuncPos:
+        if lastSensePos[0] < lastPuncPos and lastInversePos < lastPuncPos:
             score -= 1
             scanText(text,startPos+1)
             
@@ -76,7 +76,7 @@ def scanText(text:list, startPos:int) -> int:
         
         if lastSensePos[0] > lastPuncPos:
             deltaScore -= lastSensePos[1]
-            lastSensePos[0] = -1
+            lastSensePos = (-1,0)
         
         if lastInversePos > lastPuncPos:
             deltascore *= -1
@@ -104,5 +104,6 @@ score:int = 0 # 记录情感得分
 text = input("sentence:").strip()
 textCut = list(jieba.cut(text,cut_all=False)) # 分词
 
-print(scanText(textCut, 0))
+scanText(textCut, 0)
+print(score)
         
