@@ -13,8 +13,6 @@
 
 - `battery_unofficial.zip` 中的`1-s2.0-S2352340917300197-mmc2.xlsx`疑似是预览中所出现的数据集
 
-- 目前仅缺失幸福感数据集
-
 # 部分来源
 - [battery_unofficial](https://www.heywhale.com/mw/dataset/637eebb16fcf2433377e1582/content)
 
@@ -25,3 +23,6 @@
 - [secondhand_house_unofficial](https://tianchi.aliyun.com/dataset/154888)
 
 - [vgsale_unofficial](https://www.kaggle.com/code/upadorprofzs/eda-video-game-sales)
+
+# 更改
+ - 24.8.17 删除非必要数据集
