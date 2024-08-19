@@ -4,9 +4,18 @@ check requirements.txt
 ├─ README.md \
 ├─ main.py \
 ├─ dataset/ \
-&emsp;├─ README.md \
-&emsp;└─ rumor_unofficial.csv  &nbsp;//official dataset \
+&emsp;└─ food.csv &emsp;//food dataset \
 ├─ docs/ \
-&emsp;└─某社交平台谣言数据集说明.pdf
+&emsp;└─ 对照表.xlsx \
+&emsp;└─ 某市餐饮数据集说明.docx \
+├─ map/ &emsp;// map files \
+&emsp;└─ food.cpg \
+&emsp;└─ food.dbf \
+&emsp;└─ food.prj \
+&emsp;└─ food.shp \
+&emsp;└─ food.shx \
+├─ src/ \
+&emsp;└─ geopandas_test.ipynb 
 # 更改
  - 24.8.17 精简dataset dir，增添docs dir存放说明文件
+ - 24.8.19 清理无用文件，加入官方食物数据集和处理好的地图文件
