@@ -1,0 +1,37 @@
+\def\SetClass{article}
+\documentclass{\SetClass}
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\usepackage{bm}
+\fontfamily{cambria}
+\begin{document}
+\begin{algorithm}
+\caption{Select best weights and parameters combinations.}
+\KwData{train data $\bm{X}$; all parameters combinations $\bm{P}$; random weights amount $\bm{K}$; final models amount $\bm{N}$}
+\KwResult{best weights $\bm{BW}$; best parameter combinations $\bm{BP}\newline$}
+
+M = SARIMAX(p) for all p $\in \bm{P}$
+
+Y = m(X) for all m $\in M$ // predicted data from all models
+
+// $\bf{P}$, M, Y should always have the same length
+
+\While{$len(M) > \bm{N}$}{
+	\For{$k \in 1,2,..,\bf{K}$}{
+		w = random weights, sum = 1, length = length of M
+		
+		$\bar{y} = \sum^{len(w)}_{i=1} w_i * Y_i$
+		
+		Score = $MAE(\bar{y}, \bf{X})$
+	}
+	$\bf{BW}$ = the $w$ with lowest $Score$ in the loop above
+	
+	remove element with index $argmin(\bf{BW})$ in $M$, $Y$, $\bf{P}$
+}
+
+
+$\bf{BP} = \bf{P}$
+
+\Return{$\bf{BW, BP}$}
+
+\end{algorithm}
+\end{document}
