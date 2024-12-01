@@ -1,0 +1,12 @@
+food.csv			- 原始数据集
+food_preprocessed.csv		- 数据清洗后的数据集
+github.png			- 部分使用git管理的版本更新记录
+requirements.txt		- Python运行第三方库依赖
+环境说明.md			- 说明运行代码所需要的环境
+train.ipynb			- 训练模型部分的代码
+visualization.ipynb		- 实现数据可视化的代码
+data_clean.py			- 数据清洗文件
+codebook.pdf			- Codebook
+
+为保证程序正确运行并读取数据集，可能需要更改程序中加载数据集的相对路径
+如:由 “../datasets/food_preprocessed.csv” 更改为 “food_preprocessed.csv”
